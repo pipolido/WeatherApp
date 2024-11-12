@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#weatherResults {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.weather-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 120px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.weather-card .time {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.weather-card .icon img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.weather-card .temperature {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin: 5px 0;
+}
+
+.weather-card .precipitation, .weather-card .wind {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.weather-card .wind .speed {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.weather-card .wind .direction {
+    color: #888;
+}
+
+/* Resize all icons */
+.icon {
+    width: 40px; /* Adjust the width to match the size of the weather icons */
+    height: 40px; /* Adjust the height to maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the bounds without distortion */
+}
